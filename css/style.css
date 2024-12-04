@@ -1,10 +1,16 @@
+body {
+    margin:0;
+}
+
+
 
 #wrapper{
+    background-image: linear-gradient(to right, #f39c12, #f9cb82);
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 50px 200px 50px 600px 150px;
+    grid-template-rows: 50px auto 50px 600px 150px;
     grid-template-areas:
-    'H1 Nav'
+    'h1 nav'
     'img img'
     'sök sök'
     'section section'
@@ -14,26 +20,70 @@
 }
 
 #header1{
-    grid-area: H1;
-    background-color: #f3a11d;
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav{
-    grid-area: Nav;
-    background-color: #f39c12;
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+}
+
+nav a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    padding-top: 15px;
+    margin: 0px 5px 0px 5px;
+}
+
+nav a:hover{
+    background-color: #de9115;
 }
 
 img{
     grid-area: img;
-    width: 100%;
+}
+
+#sök{
+    grid-area: sök;
+    background-color: rgb(29, 53, 125);
+    border: solid black;
 }
 
 #section{
     grid-area: section;
-    
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 75px 200px 275px;
+    grid-template-areas:
+    'h2 .'
+    'art .'
+    'art .'
+    ;
+    background-image: linear-gradient(to right, #f39c12, #f9cb82);
+}
+
+article{
+    grid-area: art;
+    margin: 25px 25px 0px 25px;
+    background-color: antiquewhite;
+}
+
+h2{
+    grid-area: h2;
+    margin: 25px 25px 0px 25px;
+    background-color: antiquewhite;
 }
 
 footer{
     grid-area: feet;
-    
+    background-color: #f39c12;
 }
+
