@@ -23,14 +23,78 @@ body {
     background-image: linear-gradient(to right, #f39c12, #f9cb82);
     display: grid;
     grid-template-columns: 70% 20% 10%;
-    grid-template-rows: 50px 75px 40px 800px 150px;
+    grid-template-rows: 50px 75px 40px 1020px 150px;
     grid-template-areas:
     'h1 nav nav'
     'art2 art2 art2'
-    'sok sok .'
+    'sok sok c'
     'am am am'
     'f1 f2 f2'
     ;
+}
+
+#wrapper3{
+    background-image: linear-gradient(to right, #f39c12, #f9cb82);
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    grid-template-rows: 50px 2000px 150px;
+    grid-template-areas:
+    'h1 nav nav'
+    'tm tm tm'
+    'f1 f2 f2'
+    ;
+}
+
+#team{
+    grid-area: tm;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 200px 200px 500px 200px 100px;
+    grid-template-areas: 
+    '1h 1h 1h 1h 1h 1h 1h 1h 1h 1h'
+    '. ceo ceo ceo . hassan hassan hassan hassan .'
+    '. . . . . . . . . .'
+    '. . . zangetsu zangetsu zangetsu zangetsu . . .'
+    '. . . . . . . . . .'
+
+    ;
+}
+
+
+#CEO{
+    grid-area: ceo;
+
+}
+
+#HASSAN{
+    grid-area: hassan;
+}
+
+#ZANGETSU{
+    grid-area: zangetsu;
+}
+
+#ceo{
+    width: 100%;
+    height: auto;
+}
+
+#hassan{
+    width: 64.4%;
+    height: auto;
+    padding-left: 90px;
+}
+
+#zangetsu{
+    grid-area: zangetsu;
+    width: 84.4%;
+    height: auto;
+    padding-left: 25px;
+}
+
+#colour{
+    grid-area: c;
+    background-color: antiquewhite;
 }
 
 #header1{
@@ -100,35 +164,116 @@ article{
 #art{
     grid-area: art2;
     border-top: solid 1.5px black;
+    background-color: antiquewhite;
+}
+
+#art h3{
+    margin-bottom: -10px;
 }
 
 #a_spam{
     grid-area: am;
     display: grid;
-    grid-template-columns: 40% 30% 20% 10%;
-    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 200px 200px 200px 400px;
+    align-content: space-around;
+    background-color: antiquewhite;
     grid-template-areas: 
-    'a1 a2 a3 a4'
-    '. . . .'
-    '. . . .'
-    '. . . .'
+    'a1 a1 a1 a1 a2 a3 a3 a3 a3 .'
+    'a4 a4 a5 a5 a5 a5 a6 a6 a6 .'
+    'a7 a7 a7 a7 a7 a8 a8 a8 a9 .'
+    'a10 a10 a10 a10 a10 a10 a10 a10 a10 .'
     ;
+}
+
+#a_spam a:hover{
+    transition-timing-function:ease-in-out;
+    filter: brightness(75%);
+}
+
+#a_spam a .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+#a_spam a:hover .hover-text {
+    opacity: 1;
+
 }
 
 #l1{
     grid-area: a1;
+    padding: 3px;
+    transition: 0.4s;
 }
 
-#l3{
+#l2{
     grid-area: a2;
+    padding: 3px;
+    transition: 0.4s;
+
 }
 
 #l3{
     grid-area: a3;
+    padding: 3px;
+    transition: 0.4s;
+
 }
 
 #l4{
     grid-area: a4;
+    padding: 3px;
+    transition: 0.4s;
+
+}
+
+#l5{
+    grid-area: a5;
+    padding: 3px;
+    transition: 0.4s;
+}
+
+#l6{
+    grid-area: a6;
+    padding: 3px;
+    transition: 0.4s;
+
+}
+
+#l7{
+    grid-area: a7;
+    padding: 3px;
+    transition: 0.4s;
+
+}
+
+#l8{
+    grid-area: a8;
+    padding: 3px;
+    transition: 0.4s;
+
+}
+
+#l9{
+    grid-area: a9;
+    padding: 3px;
+    transition: 0.4s;
+
+}
+
+#l10{
+    grid-area: a10;
+    padding: 3px;
+    transition: 0.4s;
 }
 
 
