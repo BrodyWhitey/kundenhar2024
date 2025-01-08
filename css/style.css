@@ -12,11 +12,25 @@ body {
     grid-template-areas:
     'h1 nav'
     'img img'
-    'sök sök'
+    'sok sok'
     'section section'
-    'feet feet'
+    'f1 f2'
     ;
     
+}
+
+#wrapper2{
+    background-image: linear-gradient(to right, #f39c12, #f9cb82);
+    display: grid;
+    grid-template-columns: 70% 20% 10%;
+    grid-template-rows: 50px 75px 40px 800px 150px;
+    grid-template-areas:
+    'h1 nav nav'
+    'art2 art2 art2'
+    'sok sok .'
+    'am am am'
+    'f1 f2 f2'
+    ;
 }
 
 #header1{
@@ -38,7 +52,7 @@ nav a{
     text-decoration: none;
     display: inline-block;
     width: auto;
-    height: 50px;
+    height: 35px;
     padding-top: 15px;
     margin: 0px 5px 0px 5px;
 }
@@ -47,14 +61,18 @@ nav a:hover{
     background-color: #de9115;
 }
 
-img{
+#flygplan{
     grid-area: img;
+    border-top: #000000 solid 2px;
 }
 
-#sök{
-    grid-area: sök;
+#sok{
+    grid-area: sok;
+    display: flex;
     background-color: rgb(29, 53, 125);
     border: solid black;
+    align-items: center;
+    justify-content: center;
 }
 
 #section{
@@ -72,18 +90,93 @@ img{
 
 article{
     grid-area: art;
-    margin: 25px 25px 0px 25px;
+    margin: 5px 25px 0px 25px;
     background-color: antiquewhite;
+    border-radius: 10px;
+    border: solid 3px black;
+    padding: 2px 0 0 4px;
 }
+
+#art{
+    grid-area: art2;
+    border-top: solid 1.5px black;
+}
+
+#a_spam{
+    grid-area: am;
+    display: grid;
+    grid-template-columns: 40% 30% 20% 10%;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: 
+    'a1 a2 a3 a4'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    ;
+}
+
+#l1{
+    grid-area: a1;
+}
+
+#l3{
+    grid-area: a2;
+}
+
+#l3{
+    grid-area: a3;
+}
+
+#l4{
+    grid-area: a4;
+}
+
 
 h2{
     grid-area: h2;
-    margin: 25px 25px 0px 25px;
-    background-color: antiquewhite;
+    margin: 10px 25px 0px 25px;
+    text-align: center;
+    font-size: 50px;
 }
 
-footer{
-    grid-area: feet;
+#f1{
+    grid-area: f1;
     background-color: #f39c12;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-transform: capitalize;
 }
 
+#f1 p{
+    margin-right: 120px;
+}
+
+#f2{
+    grid-area: f2;
+    background-color: #f39c12;
+    display: flex;
+    flex-direction: column;
+}
+
+#f2 a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 4px;
+    margin-left: 11px;
+}
+
+#f2 a:hover{
+    background-color: #de9115;
+}
+
+#toes{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    align-content: space-evenly;
+}
